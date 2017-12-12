@@ -45,9 +45,29 @@ class Song
     self.all.sort_by { |word| word.name}
   end
 
+  def self.new_from_filename(file)
+    info=file.split(/[{]-.]/)
+      artist_name=info[0]
+      name=info[1]
+      song=self.new
+      song.name=name
+      song.artist=artist_name
+      song
+    end
+    
+    
+
+
+
+
+
+
+
+
+
+
   def self.destroy_all
     self.all.clear
   end
-
 
 end
