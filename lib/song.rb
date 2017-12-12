@@ -44,3 +44,4 @@ class Song
 def self.alphabetical
   @@all.sort_by { |word| word.downcase}
 end
+end
